@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:user_interface/pages/animalsmenu.dart';
 import 'package:user_interface/pages/animalspage.dart';
+import 'package:user_interface/pages/articlespage.dart';
 import 'package:user_interface/pages/contentpage.dart';
+import 'package:user_interface/pages/datatable.dart';
+import 'package:user_interface/pages/inkwellpage.dart';
 import 'package:user_interface/pages/profilepage.dart';
 import 'package:user_interface/pages/register.dart';
 import 'package:user_interface/pages/userpage.dart';
@@ -91,11 +94,38 @@ class _HomePageState extends State<HomePage> {
                       MaterialPageRoute(
                           builder: (context) => const UserPage()));
                 },
+              ),
+              ListTile(
+                title: const Text('Inkwell'),
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const InkwellPage()));
+                },
+              ),
+              ListTile(
+                title: const Text('Articles'),
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const ArticlesPage()));
+                },
+              ),
+              ListTile(
+                title: const Text('Data Table'),
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const HorizontalTablePage()));
+                },
               )
             ],
           ),
         ),
-        body: const CardPage(),
+        body: const Placeholder(),
       ),
     );
   }
